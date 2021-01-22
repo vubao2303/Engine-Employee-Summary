@@ -14,7 +14,7 @@ const render = require("./lib/htmlRenderer");
 var teamList = [];
 
 // promt for manager
-const managerPrompt = () => 
+const managerPrompt = () => {
   inquirer.prompt([
     {
       type: "input",
@@ -37,23 +37,26 @@ const managerPrompt = () =>
       name: "officeNum",
       message: "What is the team's manager office number?",
 
-    },
-    {
-      type: "list",
-      name: "addMemeber",
-      message: "Do you want to add intern or engineer?",
-      choices: ["intern", "enineer", "finish"],
     }
+    // {
+    //   type: "list",
+    //   name: "addMemeber",
+    //   message: "which type ",
+    //   choices: ["intern", "engineer", "finish"],
+    // }
   ]);
-  
+
  managerPrompt() 
-  .then((response) => {
+  .then(response => {
     const newManager = new Manager(response.name, response.id, response.email, response.officeNum);
-    teamList.push(newManager);
+    teamList.push(newManager)
   });
+}
+
+
 
 // promt for engineer
-const engineerPrompt = () =>
+const engineerPrompt = () => {
   inquirer.prompt([
     {
       type: "input",
@@ -78,15 +81,15 @@ const engineerPrompt = () =>
 
     }
   ]);
-  engineerPrompt()
-    .then(function (response) {
-      const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
-      teamList.push(newEngineer);
-    });
-
+engineerPrompt()
+  .then(function (response) {
+    const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
+    teamList.push(newEngineer);
+  });
+};
 
 // prompt for intern 
-const internPrompt = () => 
+const internPrompt = () => {
   inquirer.prompt([
     {
       type: "input",
@@ -116,15 +119,16 @@ const internPrompt = () =>
       const newIntern = new Intern(response.name, response.id, response.email, response.school);
       teamList.push(newIntern);
     });
+  };
 
 
-const teamHtml = render(teamList);
-
-  fs.writeFile("team.html", teamHtml, (err) => {
-    if (err) throw err;
-    else console.log("HTML team success");
-  });
-
+const addMemeber = [{
+    type: "list",
+    name: "teamMember",
+    message: "Which type of team memember would you like to add?",
+    choices: ["Engineer", "Intern", "I don't want to add any more team members"],
+    
+}];
 
 
 
@@ -151,3 +155,19 @@ const teamHtml = render(teamList);
 
 
     // at one point you will do fs.writeFile (outputPath)
+// const generateHtml =  () => { 
+//   render(teamList);
+//   fs.writeFile('index.html', render(teamList), function(err){
+//     if(err) throw err;
+// })
+// };
+
+// one of this must work 
+const generateHtml =  () => { 
+  render(teamList);
+  fs.writeFile(outputPath, render(teamList), function(err){
+    if(err) throw err;
+})
+};
+
+
