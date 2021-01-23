@@ -4,7 +4,8 @@ Using npm install inquirer to create prompts with many inputs, checkbox, and lis
 This project also uses jest to test the constructor functions, and file system that is built into node to write and read files. 
 
 ## Site-video 
-[Guide Video]()
+![Guide Video](https://drive.google.com/file/d/1zE8VSMyPzNBl4PitV8C5NjiV3unzCAD0/view)
+![Site](theBeezz.png)
 
 # Table of Contents 
 [Tittle](#Engine-Employee-Summary)
