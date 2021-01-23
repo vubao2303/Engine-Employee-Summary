@@ -630,12 +630,12 @@
 //         message: "What is your manager's office number?",
 
 //       }
-//     ]).then(responsewers => {
-//       const manager = new Manager(responsewers.managerName, responsewers.managerRole, responsewers.managerId, responsewers.managerEmail, responsewers.managerOfficeNumber);
-//       teamMembers.push(manager);
-//       buildTeam();
-//       // createTeam();
-//     });
+    // ]).then(responsewers => {
+    //   const manager = new Manager(responsewers.managerName, responsewers.managerRole, responsewers.managerId, responsewers.managerEmail, responsewers.managerOfficeNumber);
+    //   teamMembers.push(manager);
+    //   buildTeam();
+    //   // createTeam();
+    // });
 //   }
 //   // function createTeam() {
 //   //   inquirer.prompt([
@@ -662,72 +662,72 @@
 //   //     }
 //   //   });
 //   // }
-//   function addEngineer() {
-//     inquirer.prompt([
-//       {
-//         type: "input",
-//         name: "engineerName",
-//         message: "What is your engineer's name?",
+  // function addEngineer() {
+  //   inquirer.prompt([
+  //     {
+  //       type: "input",
+  //       name: "engineerName",
+  //       message: "What is your engineer's name?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "engineerId",
-//         message: "What is your engineer's id?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "engineerId",
+  //       message: "What is your engineer's id?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "engineerEmail",
-//         message: "What is your engineer's email?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "engineerEmail",
+  //       message: "What is your engineer's email?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "engineerGithub",
-//         message: "What is your engineer's GitHub username?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "engineerGithub",
+  //       message: "What is your engineer's GitHub username?",
 
-//       }
-//     ]).then(responsewers => {
-//       const engineer = new Engineer(responsewers.engineerName, responsewers.engineerId, responsewers.engineerEmail, responsewers.engineerGithub);
-//       teamMembers.push(engineer);
-//       idArray.push(responsewers.engineerId);
-//       // createTeam();
-//     });
-//   }
-//   function addIntern() {
-//     inquirer.prompt([
-//       {
-//         type: "input",
-//         name: "internName",
-//         message: "What is your intern's name?",
+  //     }
+  //   ]).then(responsewers => {
+  //     const engineer = new Engineer(responsewers.engineerName, responsewers.engineerId, responsewers.engineerEmail, responsewers.engineerGithub);
+  //     teamMembers.push(engineer);
+  //     idArray.push(responsewers.engineerId);
+  //     // createTeam();
+  //   });
+  // }
+  // function addIntern() {
+  //   inquirer.prompt([
+  //     {
+  //       type: "input",
+  //       name: "internName",
+  //       message: "What is your intern's name?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "internId",
-//         message: "What is your intern's id?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "internId",
+  //       message: "What is your intern's id?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "internEmail",
-//         message: "What is your intern's email?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "internEmail",
+  //       message: "What is your intern's email?",
 
-//       },
-//       {
-//         type: "input",
-//         name: "internSchool",
-//         message: "What is your intern's school?",
+  //     },
+  //     {
+  //       type: "input",
+  //       name: "internSchool",
+  //       message: "What is your intern's school?",
 
-//       }
-//     ]).then(responsewers => {
-//       const intern = new Intern(responsewers.internName, responsewers.internId, responsewers.internEmail, responsewers.internSchool);
-//       teamMembers.push(intern);
-//       idArray.push(responsewers.internId);
-//       // createTeam();
-//     });
-//   }
+  //     }
+  //   ]).then(responsewers => {
+  //     const intern = new Intern(responsewers.internName, responsewers.internId, responsewers.internEmail, responsewers.internSchool);
+  //     teamMembers.push(intern);
+  //     idArray.push(responsewers.internId);
+  //     // createTeam();
+  //   });
+  // }
 //   function buildTeam() {
 //     let htmlString = '';
 //     let headHtml = `
@@ -744,30 +744,30 @@
 //     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 //     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 //     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-//     <style type="text/css">
-//         body {
-//             color: #404E67;
-//             background: #F5F7FA;
-//         font-family: 'Open Sresponse', sresponse-serif;
-//       }
-//       .table-wrapper {
-//         width: 100%
-//         margin: auto;
-//             border-top: double;
-//             border-bottom: double;
-//             padding: 20px;	
-//             box-shadow: 0 1px 1px rgba(0,0,0,.05);
-//         }
-//         .table-title {
-//             padding-bottom: 10px;
-//             margin: 0 0 10px;
-//         }
-//         .table-title h2 {
-//             margin: 6px 0 0;
-//             font-size: 22px;
-//         }
-//         .table-title .add-new {
-//             float: right;
+    // <style type="text/css">
+    //     body {
+    //         color: #404E67;
+    //         background: #F5F7FA;
+    //     font-family: 'Open Sresponse', sresponse-serif;
+    //   }
+    //   .table-wrapper {
+    //     width: 100%
+    //     margin: auto;
+    //         border-top: double;
+    //         border-bottom: double;
+    //         padding: 20px;	
+    //         box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    //     }
+    //     .table-title {
+    //         padding-bottom: 10px;
+    //         margin: 0 0 10px;
+    //     }
+    //     .table-title h2 {
+    //         margin: 6px 0 0;
+    //         font-size: 22px;
+    //     }
+    //     .table-title .add-new {
+    //         float: right;
 //         height: 30px;
 //         font-weight: bold;
 //         font-size: 12px;
