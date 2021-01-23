@@ -1,6 +1,6 @@
 const Manager = require("./lib/Manager.js");
-const Engineer = require("./lib/Engineer.js");
-const Intern = require("./lib/Intern.js");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
 const fs = require("fs");
@@ -98,7 +98,8 @@ const interns = [{
 // promptManager
 const promptManager = () => {
   inquirer.prompt(managers)
-    .then(response => {
+    .then
+    (response => {
       // console.log(response);
       teamList.push(new Manager(response.name, response.id, response.email, response.officeNum));
       promptNext();
